@@ -1,5 +1,57 @@
 // Assignment code here
 
+// Variables
+
+var characters = "";
+var specialcharacters = "!@#$%^&*()";
+var nbrcharacter = "0123456789";
+var lowcharacter = "abcdefghijklmnopqrstuvwxyz";
+var upcharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+var generateBtn = document.querySelector("#generate");
+
+function generatePassword() {
+  var length = prompt(
+    "How many characters would you like your password to contain?"
+  );
+  console.log(length);
+  if (length < 8 || length > 128) {
+    alert("Password must be between 8 and 128 characters");
+    return generatePassword();
+  }
+
+  // criteria confirmations
+
+  var lowercase = confirm("Click OK to confirm including lowercase characters");
+  console.log(lowercase);
+
+  var uppercase = confirm("Click OK to confirm including uppercase characters");
+  console.log(uppercase);
+
+  var numeric = confirm("Click OK to confirm including numeric characters");
+  console.log(numeric);
+
+  var special = confirm("Click OK to confirm including special characters.");
+  console.log(special);
+
+  if (lowercase) {
+    characters += lowcharacter;
+  }
+  if (uppercase) {
+    characters += upcharacter;
+  }
+  if (numeric) {
+    characters += nbrcharacter;
+  }
+  if (special) {
+    characters += specialcharacters;
+  }
+  if (!lowercase && !uppercase && !special && !numeric) {
+    alert("Must select at least one character type!");
+    return generatePassword();
+  }
+  return "";
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -10,7 +62,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
