@@ -24,16 +24,16 @@ function generatePassword() {
   // criteria confirmations
 
   var lowercase = confirm("Click OK to confirm including lowercase characters");
-  console.log(lowercase);
+  // console.log(lowercase);
 
   var uppercase = confirm("Click OK to confirm including uppercase characters");
-  console.log(uppercase);
+  // console.log(uppercase);
 
   var numeric = confirm("Click OK to confirm including numeric characters");
-  console.log(numeric);
+  // console.log(numeric);
 
   var special = confirm("Click OK to confirm including special characters.");
-  console.log(special);
+  // console.log(special);
 
   if (lowercase) {
     characters += lowcharacter;
