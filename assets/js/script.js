@@ -11,6 +11,7 @@ var upcharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  var result = "";
   var length = prompt(
     "How many characters would you like your password to contain?"
   );
@@ -50,7 +51,21 @@ function generatePassword() {
     alert("Must select at least one character type!");
     return generatePassword();
   }
-  return "";
+  var value = Math.floor(Math.random() * characters.length);
+  console.log(characters.charAt(value));
+
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(
+      Math.floor(Math.random() * characters.length + 1)
+    );
+    console.log(result);
+  }
+
+  // var passwordStr = "";
+  // var randomValue = characters.charAt(value);
+  // passwordStr += randomValue[i];
+  // console.log(passwordStr);
+  return result;
 }
 
 // Get references to the #generate element
