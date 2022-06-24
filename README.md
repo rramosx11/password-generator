@@ -30,11 +30,12 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Password Generator Description
 
-- My password-generator webpage will provide you with a new secure password.
+- My password-generator webpage will provide the web viewer with a new secure password.
 - Once the button is clicked, the webpage will ask you how many characters you would like the password to have ranging from 8-128 characters.
-- Once the length of the password is confirmed, the webpage will ask you to confirm whether or not you have the following criteria: lowecase, uppercase, numeric, and or special characters.
+- Once the length of the password is confirmed, the webpage will ask you to confirm whether or not you want the following criteria:
+  lowecase, uppercase, numeric, and or special characters.
 - The webpage will not let you continue if you did not confirm at least one of these criterias.
-- Once all the criterias are confirmed, the wenpage will generate and display a new password.
+- Once all the criterias are confirmed, the webpage will generate and display a new password.
 
 ## Deployed URL and Screenshot of Portfolio
 
