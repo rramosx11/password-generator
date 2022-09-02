@@ -16,7 +16,12 @@ function generatePassword() {
     "How many characters would you like your password to contain?"
   );
   console.log(length);
-  if (length < 8 || length > 128) {
+  if (isNaN(length)) {
+    alert("Make sure to enter a number variable!");
+    return null;
+  }
+
+  if (length < 8 || (length > 128 && Number.isNaN(length))) {
     alert("Password must be between 8 and 128 characters");
 
     return generatePassword();
